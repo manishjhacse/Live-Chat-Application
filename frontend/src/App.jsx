@@ -6,8 +6,7 @@ import Home from "./components/Home";
 import { GoHeartFill } from "react-icons/go";
 import ChatRoom from "./components/ChatRoom";
 import { Toaster } from "react-hot-toast";
-const socket = io.connect("https://livechatapplication-0cd7.onrender.com");
-
+const socket = io.connect("https://live-chat-application-5nk8.onrender.com");
 function App() {
   return (
     <div className="flex relative justify-center flex-col overflow-hidden h-screen w-screen bg-gradient-to-r from-slate-900 to-slate-700 items-center">
