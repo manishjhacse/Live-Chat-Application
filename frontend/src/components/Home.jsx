@@ -26,7 +26,7 @@ export default function Home({ socket }) {
       navigate(`/chatroom/${roomId}`, {
         state: { userName },
       });
-      toast.success("Welcom to the Room")
+      toast.success("Welcome to the Room")
     } catch (err) {
       toast.error("Unable to join, please try again");
     }
