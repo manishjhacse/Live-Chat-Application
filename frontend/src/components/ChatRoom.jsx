@@ -3,6 +3,7 @@ import { IoIosSend } from "react-icons/io";
 import { useLocation, useParams } from "react-router-dom";
 import { FaCopy } from "react-icons/fa";
 import { toast } from "react-hot-toast";
+import { GoHeartFill } from "react-icons/go";
 export default function ChatRoom({ socket }) {
   const [chats, setChats] = useState([]);
   const [message, setMessage] = useState("");
@@ -53,7 +54,7 @@ useEffect(()=>{
     scrollToBottom()
 },[chats])
   return (
-    <div className=" bg-gray-900 md:bg-opacity-80  text-white px-3 overflow-hidden md:py-1 w-screen sm:w-[300px] h-[95%] py-10 sm:h-[500px] flex flex-col items-center rounded-md">
+    <div className=" bg-gray-900 md:bg-opacity-80  text-white px-3 overflow-hidden md:py-1 w-screen sm:w-[300px] h-[95%] pt-4 sm:h-[500px] flex flex-col items-center rounded-md">
       <h1 className="uppercase relative flex items-center gap-2 font-bold text-base">
         Your Private Room
         <FaCopy className="cursor-pointer" onClick={handleCopy} />
@@ -92,7 +93,7 @@ useEffect(()=>{
         })}
         <div ref={messagesEndRef} />
       </div>
-      <div className="relative px border border-[#9CA3AF] my-1 rounded-md flex w-full justify-start">
+      <div className="relative px border border-[#9CA3AF] my-1 rounded-full flex w-full justify-start">
         <input
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -101,7 +102,7 @@ useEffect(()=>{
               handleSend();
             }
           }}
-          className="w-[90%] bg-transparent outline-none  placeholder:text-slate-400 py-1 px-1 text-white"
+          className="w-[90%] bg-transparent outline-none  placeholder:text-slate-400 py-2 px-2 text-white"
           type="text"
           placeholder="Message..."
         />
@@ -111,7 +112,9 @@ useEffect(()=>{
         >
           <IoIosSend />
         </button>
+        
       </div>
+      <p  className="w-full absolute justify-center text-white bottom-0 flex items-center gap-1 left-1/2 -translate-x-1/2">Made with <GoHeartFill className="text-red-500" /> by <a className="text-green-500 font-bold" href="https://manishkumarjha.tech" target="_blank">Manish</a></p>
     </div>
   );
 }
