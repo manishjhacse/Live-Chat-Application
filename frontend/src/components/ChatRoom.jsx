@@ -53,12 +53,12 @@ useEffect(()=>{
     scrollToBottom()
 },[chats])
   return (
-    <div className=" bg-gray-900 md:bg-opacity-80  text-white px-3 overflow-hidden md:py-1 w-screen sm:w-[300px] h-[100%] py-3 sm:h-[500px] flex flex-col items-center rounded-md">
+    <div className=" bg-gray-900 md:bg-opacity-80  text-white px-3 overflow-hidden md:py-1 w-screen sm:w-[300px] h-screen py-10 sm:h-[500px] flex flex-col items-center rounded-md">
       <h1 className="uppercase relative flex items-center gap-2 font-bold text-base">
         Your Private Room
         <FaCopy className="cursor-pointer" onClick={handleCopy} />
       </h1>
-      <div className="w-full  overflow-y-scroll hide-scrollbar py-3 h-[85%] md:h-[87%]">
+      <div className="w-full  overflow-y-scroll hide-scrollbar py-3 h-[90%] md:h-[87%]">
         {chats.map((messageContent, index) => {
           const isUserMessage = userName === messageContent.userName;
           return (
