@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 const socket = io.connect("https://live-chat-application-5nk8.onrender.com");
 function App() {
   return (
-    <div className="flex justify-center flex-col overflow-hidden h-screen w-screen bg-gradient-to-r from-slate-900 to-slate-700 items-center">
+    <div className="flex justify-center flex-col overflow-hidden h-screen w-screen bg-gray-900  sm:bg-gradient-to-r sm:from-slate-900 sm:to-slate-700 items-center">
       <Routes path="/">
         <Route path="/" element={<Home socket={socket} />} />
         <Route
