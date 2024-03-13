@@ -33,7 +33,7 @@ export default function Home({ socket }) {
     }
   };
   return (
-    <div className=" justify-center bg-gradient-to-r from-slate-300 gap-y-3 to-slate-500 px-3 py-10 w-[250px] flex flex-col items-center rounded-md">
+    <div className=" my-auto justify-center bg-gradient-to-r from-slate-300 gap-y-3 to-slate-500 px-3 py-10 w-[250px] flex flex-col items-center rounded-md">
       <h1 className="text-xl font-bold">JOIN A CHAT</h1>
       <form className="w-full gap-y-2 flex flex-col">
         <input
